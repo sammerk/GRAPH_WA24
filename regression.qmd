@@ -1,0 +1,27 @@
+# Regressionsmodelle
+Die Modellierung mit dem allgemeinen linearen Modell (GLM) stellt eine sehr mächtige und elegante Möglichkeit zur Analyse von Daten dar [@moosbrugger2011]. Denn das GLM stellt eine Verallgemeinerung verbreiteter "einfacherer" Verfahren wie t-Tests, ANOVAs, ANCOVAs etc. dar. 
+Ohne Grundkenntnisse der linearen Algebra und Wahrscheinlichkeitstheorie ist das GLM als Ganzes jedoch schwierig zu durchdringen. Daher beginnen wir mit zwei klassischen Spezialfällen des GLM, der einfachen linearen regression und der multiple linearen Regression. 
+
+## Einfache lineare Regression
+In diesem Unterkapitel soll in die einfache lineare Regression eingeführt werden. Dazu dient ein Erklärvideo gefolgt von Aufgaben.
+
+### Erklärvideo einfache lineare Regression
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910768759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Erklaervideo_Zusammenhang_zweier_metrischer_Variablen"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+### Aufgaben: Einfache lineare Regression
+> wir noch ergänzt
+
+
+## Multiple lineare Regression
+In diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.
+
+### Erklärvideo einfache lineare Regression
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910768759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Erklaervideo_Zusammenhang_zweier_metrischer_Variablen"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+### Erklärvideo Determinationskoeffizient $R^2$
+Die standardisierten Steigungskoeffizeinten $\beta_i$ stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors $i$ mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient $R^2$ eine Effektstärke für die Güte des Gesamtmodells darstellen.
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910768944?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Determinationsoeffizient_Erklaervideo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+### Aufgaben: Multiple Regression
+> wir noch ergänzt

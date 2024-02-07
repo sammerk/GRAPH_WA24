@@ -1,0 +1,21 @@
+project:
+  type: book
+  output-dir: docs
+book:
+  title: GRAPH Winterakademie
+  subtitle: Quantitative Datenanalyse für Fortgeschrittene
+  author: Samuel Merk
+  chapters:
+  - index.qmd
+  - regression.qmd
+  - cross_lagged_panel_models.qmd
+  - longitudinal_measurement_invariance.qmd
+  - references.qmd
+bibliography: references.bib
+format:
+  html:
+    theme: cosmo
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: de
+lightbox: false

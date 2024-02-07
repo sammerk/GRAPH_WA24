@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GRAPH Winterakademie",
+    "section": "",
+    "text": "Willkommen\nHier finden sich\n\nVideos,\nAufgaben,\nDaten und\nCode\n\nfür unseren Kurs Quantitative Datenanalyse für Fortgeschrittene. Da ich durch eine Verschiebung von Kommissionsterminen leider erst Donnerstag Abend anreisen kann, bitte ich ich alle Teilnehmer:innen vorab das erste Kapitel Einfache und multiple Regression durchzuarbeiten. Dort finden sich Videos und Aufgaben diesbezüglich.",
+    "crumbs": [
+      "Willkommen"
+    ]
+  },
+  {
+    "objectID": "regression.html",
+    "href": "regression.html",
+    "title": "1  Regressionsmodelle",
+    "section": "",
+    "text": "1.1 Einfache lineare Regression\nIn diesem Unterkapitel soll in die einfache lineare Regression eingeführt werden. Dazu dient ein Erklärvideo gefolgt von Aufgaben.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
+    ]
+  },
+  {
+    "objectID": "regression.html#einfache-lineare-regression",
+    "href": "regression.html#einfache-lineare-regression",
+    "title": "1  Regressionsmodelle",
+    "section": "",
+    "text": "1.1.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.1.2 Aufgaben: Einfache lineare Regression\n\nwir noch ergänzt",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
+    ]
+  },
+  {
+    "objectID": "regression.html#multiple-lineare-regression",
+    "href": "regression.html#multiple-lineare-regression",
+    "title": "1  Regressionsmodelle",
+    "section": "1.2 Multiple lineare Regression",
+    "text": "1.2 Multiple lineare Regression\nIn diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.\n\n1.2.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.2.2 Erklärvideo Determinationskoeffizient \\(R^2\\)\nDie standardisierten Steigungskoeffizeinten \\(\\beta_i\\) stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors \\(i\\) mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient \\(R^2\\) eine Effektstärke für die Güte des Gesamtmodells darstellen.\n\n\n\n\n\n\n\n1.2.3 Aufgaben: Multiple Regression\n\nwir noch ergänzt\n\n\n\n\n\nMoosbrugger, Helfried. 2011. Lineare Modelle: Regressions- und Varianzanalysen ; mit einem Anhang über Matrixalgebra. 4., vollständig überarbeitete und ergänzte Auflage. Psychologie Lehrtexte. Bern: Verlag Hans Huber.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
+    ]
+  },
+  {
+    "objectID": "cross_lagged_panel_models.html",
+    "href": "cross_lagged_panel_models.html",
+    "title": "2  Cross Lagged Panel Modelle",
+    "section": "",
+    "text": "wir noch ergänzt",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cross Lagged Panel Modelle</span>"
+    ]
+  },
+  {
+    "objectID": "longitudinal_measurement_invariance.html",
+    "href": "longitudinal_measurement_invariance.html",
+    "title": "3  Längsschnittliche Messinvarianz",
+    "section": "",
+    "text": "wir noch ergänzt",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Längsschnittliche Messinvarianz</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Literatur",
+    "section": "",
+    "text": "Moosbrugger, Helfried. 2011. Lineare Modelle: Regressions- und\nVarianzanalysen ; mit einem Anhang über\nMatrixalgebra. 4., vollständig\nüberarbeitete und ergänzte Auflage.\nPsychologie Lehrtexte. Bern: Verlag Hans\nHuber.",
+    "crumbs": [
+      "Literatur"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+# Willkommen {.unnumbered}
+
+Hier finden sich
+
+* Videos, 
+* Aufgaben,
+* Daten und
+* Code
+
+für unseren Kurs **Quantitative Datenanalyse für Fortgeschrittene**. Da ich durch eine Verschiebung von Kommissionsterminen leider erst Donnerstag Abend anreisen kann, bitte ich ich alle Teilnehmer:innen vorab das erste Kapitel **Einfache und multiple Regression durchzuarbeiten**. Dort finden sich Videos und Aufgaben diesbezüglich.
