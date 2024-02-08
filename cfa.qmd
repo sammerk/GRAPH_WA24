@@ -1,0 +1,49 @@
+# Confirmatory Factor Analysis
+
+* Participation
+    * G4PTATTN  Grade 4 Participation: Pays attention in class
+    * G8PEATTN  Grade 8 Participation, English: Pays attention in class
+    * G8PMATTN  Grade 8 Participation, Mathematics: Pays attention in class
+    
+    * G4PTMTRL  Grade 4 Participation: Loses materials
+    * G8PEMTRL  Grade 8 Participation, English: Loses materials
+    * G8PMMTRL  Grade 8 Participation, Mathematics: Loses materials
+    
+    * G4PTPERS  Grade 4 Participation: Is persistent
+    * G8PEPERS  Grade 8 Participation, English: Is persistent
+    * G8PMPERS  Grade 8 Participation, Mathematics: Is persistent
+    
+    * G4PTLATE  Grade 4 Participation: Comes late to class
+    * G8PELATE  Grade 8 Participation, English: Comes late to class
+    * G8PMLATE  Grade 8 Participation, Mathematics: Comes late to class
+
+* Initiative    
+    * G4PTEXTR  Grade 4 Participation: Does extra work
+    * G8PEMORE  Grade 8 Participation, English: Does more than assigned work
+    * G8PMMORE  Grade 8 Participation, Mathematics: Does more than assigned work
+    
+    * G4PTDISC  Grade 4 Participation: Participates in discussions
+    * G8PEDISC  Grade 8 Participation, English: Participates in discussions
+    * G8PMDISC  Grade 8 Participation, Mathematics: Participates in discussions
+    
+    * G4PTDISS  Grade 4 Participation: Discusses subject matter outside of class 
+    * G8PEDISS  Grade 8 Participation, English: Discusses subject matter outside of class
+    * G8PMDISS  Grade 8 Participation, Mathematics: Discusses subject matter outside of class
+    
+    
+
+```{r}
+library(tidyverse)
+library(haven)
+library(lavaan)
+library(semTools)
+data_star <- read_spss("data/STAR_Students.sav")
+part4_mod0 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
+              init =~ g4ptextr + g4ptdisc + g4ptdiss"
+part4_fit0 <- cfa(part4_mod0, data = data_star)
+
+part4_mod1 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptextr + g4ptdisc + g4ptdiss"
+part4_fit1 <- cfa(part4_mod1, data = data_star)
+
+summary(compareFit(part4_fit0, part4_fit1))
+```

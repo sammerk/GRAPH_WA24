@@ -24,7 +24,7 @@
     "href": "regression.html#einfache-lineare-regression",
     "title": "1  Regressionsmodelle",
     "section": "",
-    "text": "1.1.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.1.2 Aufgaben: Einfache lineare Regression\n\nwir noch ergänzt",
+    "text": "1.1.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.1.2 Aufgaben: Einfache lineare Regression\n\nwird noch ergänzt",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
     ]
@@ -34,29 +34,39 @@
     "href": "regression.html#multiple-lineare-regression",
     "title": "1  Regressionsmodelle",
     "section": "1.2 Multiple lineare Regression",
-    "text": "1.2 Multiple lineare Regression\nIn diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.\n\n1.2.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.2.2 Erklärvideo Determinationskoeffizient \\(R^2\\)\nDie standardisierten Steigungskoeffizeinten \\(\\beta_i\\) stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors \\(i\\) mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient \\(R^2\\) eine Effektstärke für die Güte des Gesamtmodells darstellen.\n\n\n\n\n\n\n\n1.2.3 Aufgaben: Multiple Regression\n\nwir noch ergänzt\n\n\n\n\n\nMoosbrugger, Helfried. 2011. Lineare Modelle: Regressions- und Varianzanalysen ; mit einem Anhang über Matrixalgebra. 4., vollständig überarbeitete und ergänzte Auflage. Psychologie Lehrtexte. Bern: Verlag Hans Huber.",
+    "text": "1.2 Multiple lineare Regression\nIn diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.\n\n1.2.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.2.2 Erklärvideo Determinationskoeffizient \\(R^2\\)\nDie standardisierten Steigungskoeffizeinten \\(\\beta_i\\) stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors \\(i\\) mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient \\(R^2\\) eine Effektstärke für die Güte des Gesamtmodells darstellen.\n\n\n\n\n\n\n\n1.2.3 Aufgaben: Multiple Regression\n\nwird noch ergänzt\n\n\n\n\n\nMoosbrugger, Helfried. 2011. Lineare Modelle: Regressions- und Varianzanalysen ; mit einem Anhang über Matrixalgebra. 4., vollständig überarbeitete und ergänzte Auflage. Psychologie Lehrtexte. Bern: Verlag Hans Huber.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
     ]
   },
   {
+    "objectID": "cfa.html",
+    "href": "cfa.html",
+    "title": "2  Confirmatory Factor Analysis",
+    "section": "",
+    "text": "Participation\n\nG4PTATTN Grade 4 Participation: Pays attention in class\nG8PEATTN Grade 8 Participation, English: Pays attention in class\nG8PMATTN Grade 8 Participation, Mathematics: Pays attention in class\nG4PTMTRL Grade 4 Participation: Loses materials\nG8PEMTRL Grade 8 Participation, English: Loses materials\nG8PMMTRL Grade 8 Participation, Mathematics: Loses materials\nG4PTPERS Grade 4 Participation: Is persistent\nG8PEPERS Grade 8 Participation, English: Is persistent\nG8PMPERS Grade 8 Participation, Mathematics: Is persistent\nG4PTLATE Grade 4 Participation: Comes late to class\nG8PELATE Grade 8 Participation, English: Comes late to class\nG8PMLATE Grade 8 Participation, Mathematics: Comes late to class\n\nInitiative\n\nG4PTEXTR Grade 4 Participation: Does extra work\nG8PEMORE Grade 8 Participation, English: Does more than assigned work\nG8PMMORE Grade 8 Participation, Mathematics: Does more than assigned work\nG4PTDISC Grade 4 Participation: Participates in discussions\nG8PEDISC Grade 8 Participation, English: Participates in discussions\nG8PMDISC Grade 8 Participation, Mathematics: Participates in discussions\nG4PTDISS Grade 4 Participation: Discusses subject matter outside of class\nG8PEDISS Grade 8 Participation, English: Discusses subject matter outside of class\nG8PMDISS Grade 8 Participation, Mathematics: Discusses subject matter outside of class\n\n\n\nlibrary(tidyverse)\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\nWarning: package 'stringr' was built under R version 4.2.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(haven)\n\nWarning: package 'haven' was built under R version 4.2.3\n\nlibrary(lavaan)\n\nWarning: package 'lavaan' was built under R version 4.2.3\n\n\nThis is lavaan 0.6-17\nlavaan is FREE software! Please report any bugs.\n\nlibrary(semTools)\n\n \n###############################################################################\nThis is semTools 0.5-6\nAll users of R (or SEM) are invited to submit functions or ideas for functions.\n###############################################################################\n\nAttaching package: 'semTools'\n\nThe following object is masked from 'package:readr':\n\n    clipboard\n\ndata_star &lt;- read_spss(\"data/STAR_Students.sav\")\n\nFailed to find G1READ_A\nFailed to find G1MATH_A\nFailed to find G2READ_A\nFailed to find G2MATH_A\nFailed to find G3READ_A\nFailed to find G3MATH_A\n\npart4_mod0 &lt;- \"part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate\n              init =~ g4ptextr + g4ptdisc + g4ptdiss\"\npart4_fit0 &lt;- cfa(part4_mod0, data = data_star)\n\npart4_mod1 &lt;- \"part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptextr + g4ptdisc + g4ptdiss\"\npart4_fit1 &lt;- cfa(part4_mod1, data = data_star)\n\nsummary(compareFit(part4_fit0, part4_fit1))\n\n################### Nested Model Comparison #########################\n\nChi-Squared Difference Test\n\n           Df   AIC   BIC  Chisq Chisq diff   RMSEA Df diff Pr(&gt;Chisq)    \npart4_fit0 13 42956 43042 274.60                                          \npart4_fit1 14 43089 43168 408.97     134.37 0.24555       1  &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n####################### Model Fit Indices ###########################\n              chisq df pvalue rmsea   cfi   tli  srmr        aic        bic\npart4_fit0 274.601† 13   .000 .095† .949† .917† .045† 42956.157† 43041.682†\npart4_fit1 408.969  14   .000 .113  .922  .883  .053  43088.526  43168.349 \n\n################## Differences in Fit Indices #######################\n                        df rmsea    cfi    tli  srmr     aic     bic\npart4_fit1 - part4_fit0  1 0.018 -0.026 -0.033 0.008 132.369 126.667",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Confirmatory Factor Analysis</span>"
+    ]
+  },
+  {
     "objectID": "cross_lagged_panel_models.html",
     "href": "cross_lagged_panel_models.html",
-    "title": "2  Cross Lagged Panel Modelle",
+    "title": "3  Cross Lagged Panel Modelle",
     "section": "",
     "text": "wir noch ergänzt",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cross Lagged Panel Modelle</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Cross Lagged Panel Modelle</span>"
     ]
   },
   {
     "objectID": "longitudinal_measurement_invariance.html",
     "href": "longitudinal_measurement_invariance.html",
-    "title": "3  Längsschnittliche Messinvarianz",
+    "title": "4  Längsschnittliche Messinvarianz",
     "section": "",
     "text": "wir noch ergänzt",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Längsschnittliche Messinvarianz</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Längsschnittliche Messinvarianz</span>"
     ]
   },
   {
