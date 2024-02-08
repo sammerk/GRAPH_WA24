@@ -6,17 +6,47 @@ Ohne Grundkenntnisse der linearen Algebra und Wahrscheinlichkeitstheorie ist das
 In diesem Unterkapitel soll in die einfache lineare Regression eingeführt werden. Dazu dient ein Erklärvideo gefolgt von Aufgaben.
 
 ### Erklärvideo
-<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910768759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Erklaervideo_Zusammenhang_zweier_metrischer_Variablen"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910768759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Erklaervideo_Zusammenhang_zweier_metrischer_Variablen"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ### Aufgaben
-> wird noch ergänzt
+```{r}
+#| echo: false
+#| results: hide
+#| warning: false
 
+library(haven)
+library(tidyverse)
+
+data_star <- read_spss("data/STAR_Students.sav")
+
+data_star_selected_variables <- 
+    data_star |> 
+    select(g4ptattn, g4ptmtrl, g4ptpers, g4ptlate, g4ptextr, g4ptdisc, 
+           g4ptdiss, g4ptattn, g4ptmtrl, g4ptpers, g4ptlate, g4ptextr, 
+           g4ptdisc, g4ptdiss, g8peattn, g8pmattn, g8pemtrl, g8pmmtrl, g8pepers, 
+           g8pmpers, g8pelate, g8pmlate, g8pemore, g8pmmore, g8pedisc, g8pmdisc, 
+           g8pediss, g8pmdiss,
+           g4schid, g4tmathss, g4readcomprehss,
+           g3classtype, g3tmathss, g3readbsraw, g3tchid, g3tyears, 
+           g2selfconcraw, g3selfconcraw)
+
+write_sav(data_star_selected_variables, "data/data_star_selected_variables.sav")    
+
+
+```
+
+:::{.callout-note collapse=false appearance='default' icon=false}
+## Datengrundlage
+Wir werden in diesen Workshop mit den Scientific Usefiles des STAR-Projektes [@achilles1985] arbeiten. Im STAR-Projekt wurde u.a. die die Klassenzusammensetzung und die Klassengröße randomisiert bestimmt um so kausale Effekte der Klassengröße auf die schulische Leistung untersuchen zu können. Ein `.sav`-file das selektierte Variablen enthält, kann `r xfun::embed_file("data/data_star_selected_variables.sav", "data_star_selected_variables.sav", "hier")` heruntergeladen werden.
+:::
+
+> wird noch ergänzt
 
 ## Multiple lineare Regression
 In diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.
 
 ### Erklärvideo 1
-<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910768759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Erklaervideo_Zusammenhang_zweier_metrischer_Variablen"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910769054?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Zusammenhang zweier metrischer Variablen unter Kontrolle"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ### Erklärvideo 2
 Die standardisierten Steigungskoeffizeinten $\beta_i$ stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors $i$ mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient $R^2$ eine Effektstärke für die Güte des Gesamtmodells darstellen.
