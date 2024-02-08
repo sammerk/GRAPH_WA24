@@ -24,7 +24,7 @@
     "href": "regression.html#einfache-lineare-regression",
     "title": "1  Regressionsmodelle",
     "section": "",
-    "text": "1.1.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.1.2 Aufgaben: Einfache lineare Regression\n\nwird noch ergänzt",
+    "text": "1.1.1 Erklärvideo\n\n\n\n\n\n\n\n1.1.2 Aufgaben\n\nwird noch ergänzt",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "regression.html#multiple-lineare-regression",
     "title": "1  Regressionsmodelle",
     "section": "1.2 Multiple lineare Regression",
-    "text": "1.2 Multiple lineare Regression\nIn diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.\n\n1.2.1 Erklärvideo einfache lineare Regression\n\n\n\n\n\n\n\n1.2.2 Erklärvideo Determinationskoeffizient \\(R^2\\)\nDie standardisierten Steigungskoeffizeinten \\(\\beta_i\\) stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors \\(i\\) mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient \\(R^2\\) eine Effektstärke für die Güte des Gesamtmodells darstellen.\n\n\n\n\n\n\n\n1.2.3 Aufgaben: Multiple Regression\n\nwird noch ergänzt\n\n\n\n\n\nMoosbrugger, Helfried. 2011. Lineare Modelle: Regressions- und Varianzanalysen ; mit einem Anhang über Matrixalgebra. 4., vollständig überarbeitete und ergänzte Auflage. Psychologie Lehrtexte. Bern: Verlag Hans Huber.",
+    "text": "1.2 Multiple lineare Regression\nIn diesem Unterkapitel soll in die multiple Regression eingeführt werden. Dazu dient ebenfalls ein Erklärvideo gefolgt von Aufgaben.\n\n1.2.1 Erklärvideo 1\n\n\n\n\n\n\n\n1.2.2 Erklärvideo 2\nDie standardisierten Steigungskoeffizeinten \\(\\beta_i\\) stellen ja eine Effektstärke der partiellen Assoziation des Prädiktors \\(i\\) mit der abhängigen Variable dar. Nimmt man mehrere Prädiktoren auf, kann der Determinationskoeffizient \\(R^2\\) eine Effektstärke für die Güte des Gesamtmodells darstellen.\n\n\n\n\n\n\n\n1.2.3 Aufgaben\n\nwird noch ergänzt\n\n\n\n\n\nMoosbrugger, Helfried. 2011. Lineare Modelle: Regressions- und Varianzanalysen ; mit einem Anhang über Matrixalgebra. 4., vollständig überarbeitete und ergänzte Auflage. Psychologie Lehrtexte. Bern: Verlag Hans Huber.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regressionsmodelle</span>"
     ]
