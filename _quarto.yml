@@ -17,6 +17,7 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    fontsize: .8em
     css: include/webex.css
     include-after-body: include/webex.js
 lang: de

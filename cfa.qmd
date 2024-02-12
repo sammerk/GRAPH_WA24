@@ -18,7 +18,7 @@
     * G8PMLATE  Grade 8 Participation, Mathematics: Comes late to class
 
 * Initiative    
-    * G4PTEXTR  Grade 4 Participation: Does extra work
+    * G4PTMORE  Grade 4 Participation: Does extra work
     * G8PEMORE  Grade 8 Participation, English: Does more than assigned work
     * G8PMMORE  Grade 8 Participation, Mathematics: Does more than assigned work
     
@@ -37,13 +37,19 @@ library(tidyverse)
 library(haven)
 library(lavaan)
 library(semTools)
+# read complete data
 data_star <- read_spss("data/STAR_Students.sav")
+
+# read selected variables
+data_star_selected_variables <- 
+    read_spss("data/data_star_selected_variables.sav")
+
 part4_mod0 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
-              init =~ g4ptextr + g4ptdisc + g4ptdiss"
-part4_fit0 <- cfa(part4_mod0, data = data_star)
+               init =~ g4ptmore + g4ptdisc + g4ptdiss"
+part4_fit0 <- cfa(part4_mod0, data = data_star_selected_variables)
 
-part4_mod1 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptextr + g4ptdisc + g4ptdiss"
-part4_fit1 <- cfa(part4_mod1, data = data_star)
+part4_mod1 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptmore + g4ptdisc + g4ptdiss"
+part4_fit1 <- cfa(part4_mod1, data = data_star_selected_variables)
 
-summary(compareFit(part4_fit0, part4_fit1))
+summary(compareFit(part4_fit0, part4_fit1, nested = T))
 ```

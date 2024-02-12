@@ -1,3 +1,164 @@
 # Längsschnittliche Messinvarianz
 
-> wir noch ergänzt
+## Konfigurale Invarianz
+```{r}
+library(lavaan)
+library(semTools)
+library(semPlot)
+library(haven)
+
+# read complete data
+data_star <- read_spss("data/STAR_Students.sav")
+
+# read selected variables
+data_star_selected_variables <- 
+    read_spss("data/data_star_selected_variables.sav")
+
+
+part_configinv_mod <- 
+  "part4e =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
+   part8e =~ g8peattn + g8pemtrl + g8pepers + g8pelate
+
+   # latent (co-)variances
+   part4e ~~ part4e
+   part8e ~~ part8e
+   part4e ~~ part8e
+   
+   # residual variances
+   g4ptattn ~~ g4ptattn
+   g4ptmtrl ~~ g4ptmtrl
+   g4ptpers ~~ g4ptpers
+   g4ptlate ~~ g4ptlate
+   g8peattn ~~ g8peattn
+   g8pemtrl ~~ g8pemtrl
+   g8pepers ~~ g8pepers
+   g8pelate ~~ g8pelate
+   
+   # set residual covariances free over time per indicator
+   g4ptattn ~~ g8peattn
+   g4ptmtrl ~~ g8pemtrl
+   g4ptpers ~~ g8pepers
+   g4ptlate ~~ g8pelate
+   "
+
+part_configinv_fit <- 
+    cfa(part_configinv_mod, data = data_star_selected_variables)
+
+semPaths(part_configinv_fit)
+```
+
+## Schwache Invarianz
+```{r}
+part_weakinv_mod <- 
+  "part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate 
+   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate
+
+   # latent (co-)variances
+   part4e ~~ part4e
+   part8e ~~ part8e
+   part4e ~~ part8e
+   
+   # residual variances
+   g4ptattn ~~ g4ptattn
+   g4ptmtrl ~~ g4ptmtrl
+   g4ptpers ~~ g4ptpers
+   g4ptlate ~~ g4ptlate
+   g8peattn ~~ g8peattn
+   g8pemtrl ~~ g8pemtrl
+   g8pepers ~~ g8pepers
+   g8pelate ~~ g8pelate
+   
+   # set residual covariances free over time per indicator
+   g4ptattn ~~ g8peattn
+   g4ptmtrl ~~ g8pemtrl
+   g4ptpers ~~ g8pepers
+   g4ptlate ~~ g8pelate
+   "
+
+part_weakinv_fit <- 
+    cfa(part_weakinv_mod, data = data_star_selected_variables)
+
+semPaths(part_weakinv_fit, what = "col")
+semPaths(part_weakinv_fit, what = "est", fade = F)
+
+summary(compareFit(part_configinv_fit, part_weakinv_fit))
+```
+
+
+
+## Starke Invarianz
+```{r}
+part_stronginv_mod <- 
+  "part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate 
+   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate
+
+   # latent (co-)variances with constrains
+   part4e ~~ v1*part4e
+   part8e ~~ v1*part8e
+   part4e ~~ part8e
+   
+   # residual variances
+   g4ptattn ~~ g4ptattn
+   g4ptmtrl ~~ g4ptmtrl
+   g4ptpers ~~ g4ptpers
+   g4ptlate ~~ g4ptlate
+   g8peattn ~~ g8peattn
+   g8pemtrl ~~ g8pemtrl
+   g8pepers ~~ g8pepers
+   g8pelate ~~ g8pelate
+   
+   # set residual covariances free over time per indicator
+   g4ptattn ~~ g8peattn
+   g4ptmtrl ~~ g8pemtrl
+   g4ptpers ~~ g8pepers
+   g4ptlate ~~ g8pelate
+   "
+
+part_stronginv_fit <- 
+    cfa(part_stronginv_mod, data = data_star_selected_variables)
+
+semPaths(part_stronginv_fit, what = "col")
+semPaths(part_stronginv_fit, what = "est", fade = F)
+
+summary(compareFit(part_configinv_fit, part_weakinv_fit, part_stronginv_fit))
+```
+
+
+## Strikte Invarianz
+```{r}
+part_strictinv_mod <- 
+  "part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate 
+   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate
+
+   # latent (co-)variances with constrains
+   part4e ~~ v1*part4e
+   part8e ~~ v1*part8e
+   part4e ~~ part8e
+   
+   # residual variances
+   g4ptattn ~~ r1*g4ptattn
+   g4ptmtrl ~~ r2*g4ptmtrl
+   g4ptpers ~~ r3*g4ptpers
+   g4ptlate ~~ r4*g4ptlate
+   g8peattn ~~ r1*g8peattn
+   g8pemtrl ~~ r2*g8pemtrl
+   g8pepers ~~ r3*g8pepers
+   g8pelate ~~ r4*g8pelate
+   
+   # set residual covariances free over time per indicator
+   g4ptattn ~~ g8peattn
+   g4ptmtrl ~~ g8pemtrl
+   g4ptpers ~~ g8pepers
+   g4ptlate ~~ g8pelate
+   "
+
+part_strictinv_fit <- 
+    cfa(part_strictinv_mod, data = data_star_selected_variables)
+
+semPaths(part_strictinv_fit, what = "col")
+semPaths(part_strictinv_fit, what = "est", fade = F)
+
+summary(compareFit(part_configinv_fit, part_weakinv_fit, 
+                   part_stronginv_fit, part_strictinv_fit))
+```
+

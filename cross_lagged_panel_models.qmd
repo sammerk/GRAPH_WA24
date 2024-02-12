@@ -1,2 +1,44 @@
 # Cross Lagged Panel Modelle
-> wir noch ergänzt
+
+```{r}
+library(lavaan)
+library(haven)
+library(semPlot)
+
+# read complete data
+data_star <- read_spss("data/STAR_Students.sav")
+
+# read selected variables
+data_star_selected_variables <- 
+    read_spss("data/data_star_selected_variables.sav")
+
+clp0_mod <- "
+g3tmathss ~ g2tmathss
+g3readbsraw ~ g2readbsraw
+
+g3tmathss ~ g2readbsraw
+g3readbsraw ~ g2tmathss
+"
+clp0_fit <- sem(clp0_mod, data = data_star)
+
+semPaths(clp0_fit, what = "std", fade = F)
+
+parameterEstimates(clp0_fit, standardized = T)
+```
+
+
+```{r}
+library(lavaan)
+
+clp0_mod <- "
+g3tmathss ~ g2tmathss
+g3selfconcraw ~ g2selfconcraw
+
+g3tmathss ~ g2selfconcraw
+g3selfconcraw ~ g2tmathss
+"
+clp0_fit <- sem(clp0_mod, data = data_star)
+
+semPaths(clp0_fit, what = "std", fade = F)
+```
+
