@@ -1,44 +1,69 @@
 # Confirmatory Factor Analysis
+Im vorangegangenen Kapitel haben wir u.a. die Subskalen `Initiative` und `Effort` kennengelernt. Die Ausprägung dieser Variablen je Schüler:in kommt zustande, indem die Antworten auf mehrere Items gemittelt/aufsummiert werden. Die Interpretation dieses Mittelwerts als `Initiative` bzw. `Effort` setzt aber voraus, dass diese Items Indikatoren genau einer latenten Variable sind [@doering2016]. Die konfirmatorische Faktorenanalyse kann  diese Annahme prüfen. Dazu verwenden wir alle Proband:innen aus dem STAR-Sample. Ein Datensatz mit selektierten Variablen kann `r xfun::embed_file("data/data_star_selected_variables.sav", "data_star_selected_variables.sav", "hier")` heruntergeladen werden.
+
+
+## Items der Participation Subskalen
+Die Items der beiden Skalen haben die folgenden Bezeichnungen:
 
 * Participation
-    * G4PTATTN  Grade 4 Participation: Pays attention in class
-    * G8PEATTN  Grade 8 Participation, English: Pays attention in class
-    * G8PMATTN  Grade 8 Participation, Mathematics: Pays attention in class
+    * *`r tolower("G4PTATTN")`*:  Grade 4 Participation: *Pays attention in class*
+    * *`r tolower("G8PEATTN")`*:  Grade 8 Participation, *English: Pays attention in class*
+    * *`r tolower("G8PMATTN")`*:  Grade 8 Participation, *Mathematics: Pays attention in class*
     
-    * G4PTMTRL  Grade 4 Participation: Loses materials
-    * G8PEMTRL  Grade 8 Participation, English: Loses materials
-    * G8PMMTRL  Grade 8 Participation, Mathematics: Loses materials
+    * *`r tolower("G4PTMTRL")`*:  Grade 4 Participation: *Loses materials*
+    * *`r tolower("G8PEMTRL")`*:  Grade 8 Participation, English: *Loses materials*
+    * *`r tolower("G8PMMTRL")`*:  Grade 8 Participation, Mathematics: *Loses materials*
     
-    * G4PTPERS  Grade 4 Participation: Is persistent
-    * G8PEPERS  Grade 8 Participation, English: Is persistent
-    * G8PMPERS  Grade 8 Participation, Mathematics: Is persistent
+    * *`r tolower("G4PTPERS")`*:  Grade 4 Participation: *Is persistent*
+    * *`r tolower("G8PEPERS")`*:  Grade 8 Participation, English: *Is persistent*
+    * *`r tolower("G8PMPERS")`*:  Grade 8 Participation, Mathematics: *Is persistent*
     
-    * G4PTLATE  Grade 4 Participation: Comes late to class
-    * G8PELATE  Grade 8 Participation, English: Comes late to class
-    * G8PMLATE  Grade 8 Participation, Mathematics: Comes late to class
+    * *`r tolower("G4PTLATE")`*:  Grade 4 Participation: *Comes late to class*
+    * *`r tolower("G8PELATE")`*:  Grade 8 Participation, English: *Comes late to class*
+    * *`r tolower("G8PMLATE")`*:  Grade 8 Participation, Mathematics: *Comes late to class*
 
 * Initiative    
-    * G4PTMORE  Grade 4 Participation: Does extra work
-    * G8PEMORE  Grade 8 Participation, English: Does more than assigned work
-    * G8PMMORE  Grade 8 Participation, Mathematics: Does more than assigned work
+    * *`r tolower("G4PTMORE")`*:  Grade 4 Participation: *Does extra work*
+    * *`r tolower("G8PEMORE")`*:  Grade 8 Participation, English: *Does more than assigned work*
+    * *`r tolower("G8PMMORE")`*:  Grade 8 Participation, Mathematics: *Does more than assigned work*
     
-    * G4PTDISC  Grade 4 Participation: Participates in discussions
-    * G8PEDISC  Grade 8 Participation, English: Participates in discussions
-    * G8PMDISC  Grade 8 Participation, Mathematics: Participates in discussions
+    * *`r tolower("G4PTDISC")`*:  Grade 4 Participation: *Participates in discussions*
+    * *`r tolower("G8PEDISC")`*:  Grade 8 Participation, English: *Participates in discussions*
+    * *`r tolower("G8PMDISC")`*:  Grade 8 Participation, Mathematics: *Participates in discussions*
     
-    * G4PTDISS  Grade 4 Participation: Discusses subject matter outside of class 
-    * G8PEDISS  Grade 8 Participation, English: Discusses subject matter outside of class
-    * G8PMDISS  Grade 8 Participation, Mathematics: Discusses subject matter outside of class
-    
-    
+    * *`r tolower("G4PTDISS")`*:  Grade 4 Participation: *Discusses subject matter outside of class *
+    * *`r tolower("G8PEDISS")`*:  Grade 8 Participation, English: *Discusses subject matter outside of class*
+    * *`r tolower("G8PMDISS")`*:  Grade 8 Participation, Mathematics: *Discusses subject matter outside of class*
 
+## Formelsprache in lavaan    
+Mit `?model.syntax` kann man den folgenden Hilfetext zur Formelsprache in lavaan erhalten:
+
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Formula-Like Expressions
+
+There can be seven types of formula-like expressions in the model syntax:
+
+1) Latent variable definitions: The "=~" operator can be used to define (continuous) latent variables. The name of the latent variable is on the left of the "=~" operator, while the terms on the right, separated by "+" operators, are the indicators of the latent variable. The operator "=~" can be read as “is manifested by”.
+2) Regressions: The "~" operator specifies a regression. The dependent variable is on the left of a "~" operator and the independent variables, separated by "+" operators, are on the right. These regression formulas are similar to the way ordinary linear regression formulas are used in R, but they may include latent variables. Interaction terms are currently not supported.
+3) Variance-covariances: The "~~" (‘double tilde’) operator specifies (residual) variances of an observed or latent variable, or a set of covariances between one variable, and several other variables (either observed or latent). Several variables, separated by "+" operators can appear on the right. This way, several pairwise (co)variances involving the same left-hand variable can be expressed in a single expression. The distinction between variances and residual variances is made automatically.
+4) Intercepts: A special case of a regression formula can be used to specify an intercept (or a mean) of either an observed or a latent variable. The variable name is on the left of a "~" operator. On the right is only the number "1" representing the intercept. Including an intercept formula in the model automatically implies meanstructure = TRUE. The distinction between intercepts and means is made automatically.
+5) Thresholds: The "|" operator can be used to define the thresholds of categorical endogenous variables (on the left hand side of the operator). By convention, the thresholds (on the right hand sided, separated by the "+" operator, are named "t1", "t2", etcetera.
+6) Scaling factors: The "~*~" operator defines a scale factor. The variable name on the left hand side must be the same as the variable name on the right hand side. Scale factors are used in the Delta parameterization, in a multiple group analysis when factor indicators are categorical.
+7) Formative factors: The "<~" operator can be used to define a formative factor (on the right hand side of the operator), in a similar way to how a reflexive factor is defined (using the "=~" operator). This is just syntax sugar to define a phantom latent variable (equivalent to using "f =~ 0"). And in addition, the (residual) variance of the formative factor is fixed to zero.
+:::
+
+## Ein erstes CFA-Modell
 ```{r}
+#| echo: false
+#| results: hide
+#| warning: false
+#| message: false
+
 library(tidyverse)
 library(haven)
 library(lavaan)
 library(semTools)
-# read complete data
-data_star <- read_spss("data/STAR_Students.sav")
 
 # read selected variables
 data_star_selected_variables <- 
@@ -53,3 +78,12 @@ part4_fit1 <- cfa(part4_mod1, data = data_star_selected_variables)
 
 summary(compareFit(part4_fit0, part4_fit1, nested = T))
 ```
+
+
+## Weiterführende Literatur
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Literaturempfehlungen zum Thema CFA
+* Eid, M., Gollwitzer, M., & Schmitt, M. (2013). Statistik und Forschungsmethoden: Lehrbuch. Mit Online-Materialien (3. Aufl.). Beltz.
+* Sacha Epskamp (Regisseur). (2019, April 5). SEM1 (2019)—Stats recap. https://www.youtube.com/watch?v=fGdsiugwO0k
+* Brown, T. A. (2015). Confirmatory factor analysis for applied research. Guilford Press.
+:::

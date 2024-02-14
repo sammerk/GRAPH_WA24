@@ -8,12 +8,7 @@ library(semPlot)
 library(haven)
 
 # read complete data
-data_star <- read_spss("data/STAR_Students.sav")
-
-# read selected variables
-data_star_selected_variables <- 
-    read_spss("data/data_star_selected_variables.sav")
-
+data_star_selected_variables <- read_spss("data/data_star_selected_variables.sav")
 
 part_configinv_mod <- 
   "part4e =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
@@ -162,3 +157,10 @@ summary(compareFit(part_configinv_fit, part_weakinv_fit,
                    part_stronginv_fit, part_strictinv_fit))
 ```
 
+
+## Weiterführende Literatur
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Literaturempfehlungen zum Thema Longitudinal Measurement Invariance
+* Mackinnon, S., Curtis, R., & O’Connor, R. (2024). A Tutorial in Longitudinal Measurement Invariance and Cross-lagged Panel Models Using lavaan. https://doi.org/10.31234/osf.io/tkzrb
+* Brown, T. A. (2015). Confirmatory factor analysis for applied research. Guilford Press.
+:::

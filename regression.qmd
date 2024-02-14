@@ -52,7 +52,8 @@ data_star_selected_variables <-
            g2surban, g3surban,
            g3classtype, g3tmathss, g3readbsraw, g3tchid, g3tyears, 
            g2selfconcraw, g3selfconcraw, g3classsize, g2classsize,
-           g4pteffr, g4ptinit, g3motivraw, g2motivraw) |> 
+           g4pteffr, g4ptinit, g3motivraw, g2motivraw,
+           g4tmathss, g4treadss, g3treadss, g2treadss) |> 
     mutate(g4ptattn = as.numeric(as.factor(g4ptattn)),
            g4ptmtrl = 6 - as.numeric(as.factor(g4ptmtrl)),
            g4ptpers = as.numeric(as.factor(g4ptpers)),
@@ -265,3 +266,12 @@ tab_model(
 Der standardisierte Regressionskoeffizient der Initiative-Skala ist mit .49 groß ausgeprägt.
 Nach Adjustierung um die Vorjahrestestleistung, sinkt die prädiktive Kraft deutlich, es ist aber weiterhin ein substantieller Effekt zu beobachten.
 :::
+
+## Weiterführende Literatur
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Literaturempfehlungen zum Thema Regression
+* Eid, M., Gollwitzer, M., & Schmitt, M. (2013). Statistik und Forschungsmethoden: Lehrbuch. Mit Online-Materialien (3. Aufl.). Beltz.
+* Gelman, A., Hill, J., & Vehtari, A. (2020). Regression and Other Stories (1. Aufl.). Cambridge University Press. https://doi.org/10.1017/9781139161879
+:::
+
+

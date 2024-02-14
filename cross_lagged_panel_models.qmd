@@ -6,20 +6,15 @@ library(haven)
 library(semPlot)
 
 # read complete data
-data_star <- read_spss("data/STAR_Students.sav")
+data_star_sampled <- read_spss("data/data_star_sampled.sav")
 
-# read selected variables
-data_star_selected_variables <- 
-    read_spss("data/data_star_selected_variables.sav")
+clp0_mod <- "g3tmathss ~ g2tmathss
+             g3treadss ~ g2treadss
+             
+             g3tmathss ~ g2treadss
+             g3treadss ~ g2tmathss"
 
-clp0_mod <- "
-g3tmathss ~ g2tmathss
-g3readbsraw ~ g2readbsraw
-
-g3tmathss ~ g2readbsraw
-g3readbsraw ~ g2tmathss
-"
-clp0_fit <- sem(clp0_mod, data = data_star)
+clp0_fit <- sem(clp0_mod, data = data_star_sampled)
 
 semPaths(clp0_fit, what = "std", fade = F)
 
@@ -27,18 +22,9 @@ parameterEstimates(clp0_fit, standardized = T)
 ```
 
 
-```{r}
-library(lavaan)
-
-clp0_mod <- "
-g3tmathss ~ g2tmathss
-g3selfconcraw ~ g2selfconcraw
-
-g3tmathss ~ g2selfconcraw
-g3selfconcraw ~ g2tmathss
-"
-clp0_fit <- sem(clp0_mod, data = data_star)
-
-semPaths(clp0_fit, what = "std", fade = F)
-```
-
+## Weiterführende Literatur
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Literaturempfehlungen zum Thema Cross Lagged Panel Models
+* Mackinnon, S., Curtis, R., & O’Connor, R. (2024). A Tutorial in Longitudinal Measurement Invariance and Cross-lagged Panel Models Using lavaan. https://doi.org/10.31234/osf.io/tkzrb
+* McArdle, J. J., & Grimm, K. J. (2010). Five steps in latent curve and latent change score modeling with longitudinal data. In K. van Montfort, J. H. L. Oud, & A. Satorra (Hrsg.), Longitudinal Research with Latent Variables (S. 245–273). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-11760-2_8
+:::
