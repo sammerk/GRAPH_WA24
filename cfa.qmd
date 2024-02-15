@@ -80,7 +80,6 @@ summary(compareFit(part4_fit0, part4_fit1, nested = T))
 ```
 
 
-## Weiterführende Literatur
 :::{.callout-note collapse=false appearance='default' icon=true}
 ## Literaturempfehlungen zum Thema CFA
 * Eid, M., Gollwitzer, M., & Schmitt, M. (2013). Statistik und Forschungsmethoden: Lehrbuch. Mit Online-Materialien (3. Aufl.). Beltz.
