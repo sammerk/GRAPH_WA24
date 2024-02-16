@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cross_lagged_panel_models.html" rel="next">
+<link href="./longitudinal_measurement_invariance.html" rel="next">
 <link href="./regression.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -180,14 +180,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cross_lagged_panel_models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span></a>
+  <a href="./longitudinal_measurement_invariance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./longitudinal_measurement_invariance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span></a>
+  <a href="./cross_lagged_panel_models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -344,6 +344,15 @@ part4_fit0 408.969  14   .000 .113  .922  .883  .053  43088.526  43168.349
 ################## Differences in Fit Indices #######################
                         df rmsea    cfi    tli  srmr     aic     bic
 part4_fit0 - part4_fit1  1 0.018 -0.026 -0.033 0.008 132.369 126.667</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(semPlot)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part4_fit1, <span class="at">what =</span> <span class="st">"est"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="cfa_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -770,8 +779,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cross_lagged_panel_models.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Cross Lagged Panel Modelle</span>">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./longitudinal_measurement_invariance.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Längsschnittliche Messinvarianz</span>">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

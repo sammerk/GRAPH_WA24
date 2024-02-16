@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GRAPH Winterakademie - 3&nbsp; Cross Lagged Panel Modelle</title>
+<title>GRAPH Winterakademie - 4&nbsp; Cross Lagged Panel Modelle</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./longitudinal_measurement_invariance.html" rel="next">
-<link href="./cfa.html" rel="prev">
+<link href="./latent_change_score_models.html" rel="next">
+<link href="./longitudinal_measurement_invariance.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cross_lagged_panel_models.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cross_lagged_panel_models.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -160,14 +160,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cross_lagged_panel_models.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span></a>
+  <a href="./longitudinal_measurement_invariance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./longitudinal_measurement_invariance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span></a>
+  <a href="./cross_lagged_panel_models.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#weiterführende-literatur" id="toc-weiterführende-literatur" class="nav-link active" data-scroll-target="#weiterführende-literatur"><span class="header-section-number">3.1</span> Weiterführende Literatur</a></li>
+  <li><a href="#weiterführende-literatur" id="toc-weiterführende-literatur" class="nav-link active" data-scroll-target="#weiterführende-literatur"><span class="header-section-number">4.1</span> Weiterführende Literatur</a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></h1>
 </div>
 
 
@@ -277,9 +277,57 @@ lavaan is FREE software! Please report any bugs.</code></pre>
 9  1244.568   0.661 1244.568
 10 1911.278   1.000 1911.278</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(clp0_fit, <span class="at">rsquare =</span> T, <span class="at">std =</span> T)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6.17 ended normally after 23 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         7
+
+                                                  Used       Total
+  Number of observations                           245         337
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  g3tmathss ~                                                           
+    g2tmathss         0.464    0.049    9.490    0.000    0.464    0.516
+  g3treadss ~                                                           
+    g2treadss         0.559    0.048   11.653    0.000    0.559    0.635
+  g3tmathss ~                                                           
+    g2treadss         0.286    0.048    5.934    0.000    0.286    0.323
+  g3treadss ~                                                           
+    g2tmathss         0.163    0.049    3.355    0.001    0.163    0.183
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+ .g3tmathss ~~                                                          
+   .g3treadss       303.184   43.516    6.967    0.000  303.184    0.497
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+   .g3tmathss       612.072   55.301   11.068    0.000  612.072    0.409
+   .g3treadss       607.790   54.914   11.068    0.000  607.790    0.410
+
+R-Square:
+                   Estimate
+    g3tmathss         0.591
+    g3treadss         0.590</code></pre>
 </div>
-<section id="weiterführende-literatur" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="weiterführende-literatur"><span class="header-section-number">3.1</span> Weiterführende Literatur</h2>
+</div>
+<section id="weiterführende-literatur" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="weiterführende-literatur"><span class="header-section-number">4.1</span> Weiterführende Literatur</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -693,13 +741,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cfa.html" class="pagination-link  aria-label=" &lt;span="" factor="" analysis&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confirmatory Factor Analysis</span></span>
+      <a href="./longitudinal_measurement_invariance.html" class="pagination-link  aria-label=" &lt;span="" messinvarianz&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./longitudinal_measurement_invariance.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Längsschnittliche Messinvarianz</span>">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./latent_change_score_models.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Latent Change Score Models</span>">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Latent Change Score Models</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

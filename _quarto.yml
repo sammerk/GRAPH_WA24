@@ -9,8 +9,8 @@ book:
   - index.qmd
   - regression.qmd
   - cfa.qmd
-  - cross_lagged_panel_models.qmd
   - longitudinal_measurement_invariance.qmd
+  - cross_lagged_panel_models.qmd
   - latent_change_score_models.qmd
   - references.qmd
 bibliography: references.bib

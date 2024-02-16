@@ -19,6 +19,8 @@ clp0_fit <- sem(clp0_mod, data = data_star_sampled)
 semPaths(clp0_fit, what = "std", fade = F)
 
 parameterEstimates(clp0_fit, standardized = T)
+
+summary(clp0_fit, rsquare = T, std = T)
 ```
 
 

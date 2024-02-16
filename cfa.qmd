@@ -77,6 +77,10 @@ part4_fit0 <- cfa(part4_mod0, data = data_star_selected_variables)
 part4_fit1 <- cfa(part4_mod1, data = data_star_selected_variables)
 
 summary(compareFit(part4_fit0, part4_fit1, nested = T))
+
+library(semPlot)
+semPaths(part4_fit1, what = "est")
+
 ```
 
 

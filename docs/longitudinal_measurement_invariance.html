@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GRAPH Winterakademie - 4&nbsp; Längsschnittliche Messinvarianz</title>
+<title>GRAPH Winterakademie - 3&nbsp; Längsschnittliche Messinvarianz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./latent_change_score_models.html" rel="next">
-<link href="./cross_lagged_panel_models.html" rel="prev">
+<link href="./cross_lagged_panel_models.html" rel="next">
+<link href="./cfa.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./longitudinal_measurement_invariance.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./longitudinal_measurement_invariance.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -160,14 +160,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cross_lagged_panel_models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span></a>
+  <a href="./longitudinal_measurement_invariance.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./longitudinal_measurement_invariance.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></span></a>
+  <a href="./cross_lagged_panel_models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,11 +192,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#konfigurale-invarianz" id="toc-konfigurale-invarianz" class="nav-link active" data-scroll-target="#konfigurale-invarianz"><span class="header-section-number">4.1</span> Konfigurale Invarianz</a></li>
-  <li><a href="#schwache-invarianz" id="toc-schwache-invarianz" class="nav-link" data-scroll-target="#schwache-invarianz"><span class="header-section-number">4.2</span> Schwache Invarianz</a></li>
-  <li><a href="#starke-invarianz" id="toc-starke-invarianz" class="nav-link" data-scroll-target="#starke-invarianz"><span class="header-section-number">4.3</span> Starke Invarianz</a></li>
-  <li><a href="#strikte-invarianz" id="toc-strikte-invarianz" class="nav-link" data-scroll-target="#strikte-invarianz"><span class="header-section-number">4.4</span> Strikte Invarianz</a></li>
-  <li><a href="#weiterführende-literatur" id="toc-weiterführende-literatur" class="nav-link" data-scroll-target="#weiterführende-literatur"><span class="header-section-number">4.5</span> Weiterführende Literatur</a></li>
+  <li><a href="#konfigurale-invarianz" id="toc-konfigurale-invarianz" class="nav-link active" data-scroll-target="#konfigurale-invarianz"><span class="header-section-number">3.1</span> Konfigurale Invarianz</a></li>
+  <li><a href="#schwache-invarianz" id="toc-schwache-invarianz" class="nav-link" data-scroll-target="#schwache-invarianz"><span class="header-section-number">3.2</span> Schwache Invarianz</a></li>
+  <li><a href="#starke-invarianz" id="toc-starke-invarianz" class="nav-link" data-scroll-target="#starke-invarianz"><span class="header-section-number">3.3</span> Starke Invarianz</a></li>
+  <li><a href="#strikte-invarianz" id="toc-strikte-invarianz" class="nav-link" data-scroll-target="#strikte-invarianz"><span class="header-section-number">3.4</span> Strikte Invarianz</a></li>
+  <li><a href="#weiterführende-literatur" id="toc-weiterführende-literatur" class="nav-link" data-scroll-target="#weiterführende-literatur"><span class="header-section-number">3.5</span> Weiterführende Literatur</a></li>
   </ul>
 </nav>
     </div>
@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Längsschnittliche Messinvarianz</span></h1>
 </div>
 
 
@@ -222,8 +222,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="konfigurale-invarianz" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="konfigurale-invarianz"><span class="header-section-number">4.1</span> Konfigurale Invarianz</h2>
+<section id="konfigurale-invarianz" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="konfigurale-invarianz"><span class="header-section-number">3.1</span> Konfigurale Invarianz</h2>
+<p>Konfigurale Invarianz prüft ob die Dimensionalität über die Zeit erhalten bleibt. Daher spezifiziert man ein Modell das diese Anforderung erfüllt und evaluiert dessen absoluten Fit oder man vergleicht dieses Modell mit plausiblen Modellen, die diese Anforderung nicht erfüllen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -257,36 +258,41 @@ lavaan is FREE software! Please report any bugs.</code></pre>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read complete data</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>data_star_selected_variables <span class="ot">&lt;-</span> <span class="fu">read_spss</span>(<span class="st">"data/data_star_selected_variables.sav"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>part_configinv_mod <span class="ot">&lt;-</span> </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + g8pemtrl + g8pepers + g8pelate</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part4e</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ part8e</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g4ptattn</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g4ptmtrl</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g4ptpers</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g4ptlate</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ g8peattn</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ g8pemtrl</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ g8pepers</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ g8pelate</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>part_configinv_fit <span class="ot">&lt;-</span> </span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_configinv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_configinv_fit)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># specify model with same structure at both times</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>part_configinv_mod <span class="ot">&lt;-</span> </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + g8pemtrl + g8pepers + g8pelate</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part4e</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ part8e</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g4ptattn</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g4ptmtrl</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g4ptpers</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g4ptlate</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ g8peattn</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ g8pemtrl</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ g8pepers</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ g8pelate</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="co"># fit the model to the data aka compare modelimplied and</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="co"># empirical variance-covariance structure</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>part_configinv_fit <span class="ot">&lt;-</span> </span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_configinv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_configinv_fit, <span class="at">what=</span><span class="st">"std"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -294,41 +300,166 @@ lavaan is FREE software! Please report any bugs.</code></pre>
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parameterestimates</span>(part_configinv_fit, <span class="at">standardized =</span> T)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        lhs op      rhs   est    se      z pvalue ci.lower ci.upper std.lv
+1    part4e =~ g4ptattn 1.000 0.000     NA     NA    1.000    1.000  0.783
+2    part4e =~ g4ptmtrl 0.927 0.058 16.081  0.000    0.814    1.040  0.726
+3    part4e =~ g4ptpers 0.890 0.058 15.251  0.000    0.775    1.004  0.696
+4    part4e =~ g4ptlate 0.411 0.039 10.630  0.000    0.335    0.486  0.321
+5    part8e =~ g8peattn 1.000 0.000     NA     NA    1.000    1.000  0.721
+6    part8e =~ g8pemtrl 1.039 0.054 19.362  0.000    0.934    1.145  0.749
+7    part8e =~ g8pepers 0.951 0.053 17.991  0.000    0.847    1.054  0.685
+8    part8e =~ g8pelate 0.562 0.039 14.419  0.000    0.485    0.638  0.405
+9    part4e ~~   part4e 0.612 0.047 13.123  0.000    0.521    0.704  1.000
+10   part8e ~~   part8e 0.519 0.037 13.918  0.000    0.446    0.593  1.000
+11   part4e ~~   part8e 0.271 0.026 10.567  0.000    0.221    0.321  0.481
+12 g4ptattn ~~ g4ptattn 0.226 0.032  7.180  0.000    0.165    0.288  0.226
+13 g4ptmtrl ~~ g4ptmtrl 0.812 0.045 17.923  0.000    0.724    0.901  0.812
+14 g4ptpers ~~ g4ptpers 0.936 0.049 19.005  0.000    0.839    1.032  0.936
+15 g4ptlate ~~ g4ptlate 0.608 0.028 21.532  0.000    0.553    0.663  0.608
+16 g8peattn ~~ g8peattn 0.217 0.023  9.619  0.000    0.173    0.261  0.217
+17 g8pemtrl ~~ g8pemtrl 0.599 0.035 16.969  0.000    0.530    0.668  0.599
+18 g8pepers ~~ g8pepers 0.692 0.037 18.678  0.000    0.620    0.765  0.692
+19 g8pelate ~~ g8pelate 0.494 0.024 20.767  0.000    0.447    0.541  0.494
+20 g4ptattn ~~ g8peattn 0.006 0.015  0.372  0.710   -0.024    0.035  0.006
+21 g4ptmtrl ~~ g8pemtrl 0.093 0.027  3.493  0.000    0.041    0.145  0.093
+22 g4ptpers ~~ g8pepers 0.012 0.029  0.415  0.678   -0.045    0.069  0.012
+23 g4ptlate ~~ g8pelate 0.058 0.018  3.184  0.001    0.022    0.094  0.058
+   std.all std.nox
+1    0.854   0.854
+2    0.627   0.627
+3    0.584   0.584
+4    0.381   0.381
+5    0.840   0.840
+6    0.696   0.696
+7    0.636   0.636
+8    0.499   0.499
+9    1.000   1.000
+10   1.000   1.000
+11   0.481   0.481
+12   0.270   0.270
+13   0.607   0.607
+14   0.659   0.659
+15   0.855   0.855
+16   0.295   0.295
+17   0.516   0.516
+18   0.596   0.596
+19   0.751   0.751
+20   0.025   0.025
+21   0.133   0.133
+22   0.015   0.015
+23   0.106   0.106</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(part_configinv_fit, <span class="at">rsquare =</span> T)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6.17 ended normally after 25 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                        21
+
+                                                  Used       Total
+  Number of observations                          1013       11601
+
+Model Test User Model:
+                                                      
+  Test statistic                                58.125
+  Degrees of freedom                                15
+  P-value (Chi-square)                           0.000
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Latent Variables:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  part4e =~                                           
+    g4ptattn          1.000                           
+    g4ptmtrl          0.927    0.058   16.081    0.000
+    g4ptpers          0.890    0.058   15.251    0.000
+    g4ptlate          0.411    0.039   10.630    0.000
+  part8e =~                                           
+    g8peattn          1.000                           
+    g8pemtrl          1.039    0.054   19.362    0.000
+    g8pepers          0.951    0.053   17.991    0.000
+    g8pelate          0.562    0.039   14.419    0.000
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  part4e ~~                                           
+    part8e            0.271    0.026   10.567    0.000
+ .g4ptattn ~~                                         
+   .g8peattn          0.006    0.015    0.372    0.710
+ .g4ptmtrl ~~                                         
+   .g8pemtrl          0.093    0.027    3.493    0.000
+ .g4ptpers ~~                                         
+   .g8pepers          0.012    0.029    0.415    0.678
+ .g4ptlate ~~                                         
+   .g8pelate          0.058    0.018    3.184    0.001
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+    part4e            0.612    0.047   13.123    0.000
+    part8e            0.519    0.037   13.918    0.000
+   .g4ptattn          0.226    0.032    7.180    0.000
+   .g4ptmtrl          0.812    0.045   17.923    0.000
+   .g4ptpers          0.936    0.049   19.005    0.000
+   .g4ptlate          0.608    0.028   21.532    0.000
+   .g8peattn          0.217    0.023    9.619    0.000
+   .g8pemtrl          0.599    0.035   16.969    0.000
+   .g8pepers          0.692    0.037   18.678    0.000
+   .g8pelate          0.494    0.024   20.767    0.000
+
+R-Square:
+                   Estimate
+    g4ptattn          0.730
+    g4ptmtrl          0.393
+    g4ptpers          0.341
+    g4ptlate          0.145
+    g8peattn          0.705
+    g8pemtrl          0.484
+    g8pepers          0.404
+    g8pelate          0.249</code></pre>
+</div>
 </div>
 </section>
-<section id="schwache-invarianz" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="schwache-invarianz"><span class="header-section-number">4.2</span> Schwache Invarianz</h2>
+<section id="schwache-invarianz" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="schwache-invarianz"><span class="header-section-number">3.2</span> Schwache Invarianz</h2>
+<p>Schwache</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>part_weakinv_mod <span class="ot">&lt;-</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate </span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part4e</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ part8e</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g4ptattn</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g4ptmtrl</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g4ptpers</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g4ptlate</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ g8peattn</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ g8pemtrl</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ g8pepers</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ g8pelate</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>part_weakinv_fit <span class="ot">&lt;-</span> </span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_weakinv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_weakinv_fit, <span class="at">what =</span> <span class="st">"col"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>part_weakinv_mod <span class="ot">&lt;-</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate </span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part4e</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ part8e</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g4ptattn</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g4ptmtrl</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g4ptpers</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g4ptlate</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ g8peattn</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ g8pemtrl</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ g8pepers</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ g8pelate</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>part_weakinv_fit <span class="ot">&lt;-</span> </span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_weakinv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_weakinv_fit, <span class="at">what =</span> <span class="st">"col"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -336,7 +467,7 @@ lavaan is FREE software! Please report any bugs.</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_weakinv_fit, <span class="at">what =</span> <span class="st">"est"</span>, <span class="at">fade =</span> F)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_weakinv_fit, <span class="at">what =</span> <span class="st">"est"</span>, <span class="at">fade =</span> F)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -344,7 +475,7 @@ lavaan is FREE software! Please report any bugs.</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part_configinv_fit, part_weakinv_fit))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part_configinv_fit, part_weakinv_fit))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>################### Nested Model Comparison #########################
 
@@ -375,39 +506,39 @@ part_weakinv_fit - part_configinv_fit -12.735</code></pre>
 </div>
 </div>
 </section>
-<section id="starke-invarianz" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="starke-invarianz"><span class="header-section-number">4.3</span> Starke Invarianz</h2>
+<section id="starke-invarianz" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="starke-invarianz"><span class="header-section-number">3.3</span> Starke Invarianz</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>part_stronginv_mod <span class="ot">&lt;-</span> </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate </span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances with constrains</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ v1*part4e</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ v1*part8e</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g4ptattn</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g4ptmtrl</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g4ptpers</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g4ptlate</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ g8peattn</span></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ g8pemtrl</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ g8pepers</span></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ g8pelate</span></span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
-<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
-<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
-<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
-<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>part_stronginv_fit <span class="ot">&lt;-</span> </span>
-<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_stronginv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
-<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_stronginv_fit, <span class="at">what =</span> <span class="st">"col"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>part_stronginv_mod <span class="ot">&lt;-</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate </span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances with constrains</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ v1*part4e</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ v1*part8e</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g4ptattn</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g4ptmtrl</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g4ptpers</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g4ptlate</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ g8peattn</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ g8pemtrl</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ g8pepers</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ g8pelate</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>part_stronginv_fit <span class="ot">&lt;-</span> </span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_stronginv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_stronginv_fit, <span class="at">what =</span> <span class="st">"col"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -415,7 +546,7 @@ part_weakinv_fit - part_configinv_fit -12.735</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_stronginv_fit, <span class="at">what =</span> <span class="st">"est"</span>, <span class="at">fade =</span> F)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_stronginv_fit, <span class="at">what =</span> <span class="st">"est"</span>, <span class="at">fade =</span> F)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -423,7 +554,7 @@ part_weakinv_fit - part_configinv_fit -12.735</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part_configinv_fit, part_weakinv_fit, part_stronginv_fit))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part_configinv_fit, part_weakinv_fit, part_stronginv_fit))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>################### Nested Model Comparison #########################
 
@@ -460,39 +591,39 @@ part_stronginv_fit - part_weakinv_fit  -6.700</code></pre>
 </div>
 </div>
 </section>
-<section id="strikte-invarianz" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="strikte-invarianz"><span class="header-section-number">4.4</span> Strikte Invarianz</h2>
+<section id="strikte-invarianz" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="strikte-invarianz"><span class="header-section-number">3.4</span> Strikte Invarianz</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>part_strictinv_mod <span class="ot">&lt;-</span> </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate </span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances with constrains</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ v1*part4e</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ v1*part8e</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ r1*g4ptattn</span></span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ r2*g4ptmtrl</span></span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ r3*g4ptpers</span></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ r4*g4ptlate</span></span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ r1*g8peattn</span></span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ r2*g8pemtrl</span></span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ r3*g8pepers</span></span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ r4*g8pelate</span></span>
-<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
-<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
-<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
-<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
-<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
-<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
-<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
-<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>part_strictinv_fit <span class="ot">&lt;-</span> </span>
-<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_strictinv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
-<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_strictinv_fit, <span class="at">what =</span> <span class="st">"col"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>part_strictinv_mod <span class="ot">&lt;-</span> </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate </span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e =~ g8peattn + s1*g8pemtrl + s2*g8pepers + s3*g8pelate</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="st">   # latent (co-)variances with constrains</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ v1*part4e</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="st">   part8e ~~ v1*part8e</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="st">   part4e ~~ part8e</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="st">   # residual variances</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ r1*g4ptattn</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ r2*g4ptmtrl</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ r3*g4ptpers</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ r4*g4ptlate</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="st">   g8peattn ~~ r1*g8peattn</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pemtrl ~~ r2*g8pemtrl</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pepers ~~ r3*g8pepers</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a><span class="st">   g8pelate ~~ r4*g8pelate</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a><span class="st">   </span></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a><span class="st">   # set residual covariances free over time per indicator</span></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptattn ~~ g8peattn</span></span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptmtrl ~~ g8pemtrl</span></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptpers ~~ g8pepers</span></span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="st">   g4ptlate ~~ g8pelate</span></span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="st">   "</span></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>part_strictinv_fit <span class="ot">&lt;-</span> </span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cfa</span>(part_strictinv_mod, <span class="at">data =</span> data_star_selected_variables)</span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_strictinv_fit, <span class="at">what =</span> <span class="st">"col"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -500,7 +631,7 @@ part_stronginv_fit - part_weakinv_fit  -6.700</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_strictinv_fit, <span class="at">what =</span> <span class="st">"est"</span>, <span class="at">fade =</span> F)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">semPaths</span>(part_strictinv_fit, <span class="at">what =</span> <span class="st">"est"</span>, <span class="at">fade =</span> F)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -508,8 +639,8 @@ part_stronginv_fit - part_weakinv_fit  -6.700</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part_configinv_fit, part_weakinv_fit, </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>                   part_stronginv_fit, part_strictinv_fit))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part_configinv_fit, part_weakinv_fit, </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>                   part_stronginv_fit, part_strictinv_fit))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>################### Nested Model Comparison #########################
 
@@ -552,8 +683,8 @@ part_strictinv_fit - part_stronginv_fit  19.430</code></pre>
 </div>
 </div>
 </section>
-<section id="weiterführende-literatur" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="weiterführende-literatur"><span class="header-section-number">4.5</span> Weiterführende Literatur</h2>
+<section id="weiterführende-literatur" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="weiterführende-literatur"><span class="header-section-number">3.5</span> Weiterführende Literatur</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -967,13 +1098,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cross_lagged_panel_models.html" class="pagination-link  aria-label=" &lt;span="" lagged="" panel="" modelle&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span>
+      <a href="./cfa.html" class="pagination-link  aria-label=" &lt;span="" factor="" analysis&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confirmatory Factor Analysis</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./latent_change_score_models.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Latent Change Score Models</span>">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Latent Change Score Models</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cross_lagged_panel_models.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Cross Lagged Panel Modelle</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cross Lagged Panel Modelle</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

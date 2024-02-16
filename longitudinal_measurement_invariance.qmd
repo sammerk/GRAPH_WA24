@@ -1,6 +1,7 @@
 # Längsschnittliche Messinvarianz
 
 ## Konfigurale Invarianz
+Konfigurale Invarianz prüft ob die Dimensionalität über die Zeit erhalten bleibt. Daher spezifiziert man ein Modell das diese Anforderung erfüllt und evaluiert dessen absoluten Fit oder man vergleicht dieses Modell mit plausiblen Modellen, die diese Anforderung nicht erfüllen.
 ```{r}
 library(lavaan)
 library(semTools)
@@ -9,6 +10,8 @@ library(haven)
 
 # read complete data
 data_star_selected_variables <- read_spss("data/data_star_selected_variables.sav")
+
+# specify model with same structure at both times
 
 part_configinv_mod <- 
   "part4e =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
@@ -36,13 +39,19 @@ part_configinv_mod <-
    g4ptlate ~~ g8pelate
    "
 
+# fit the model to the data aka compare modelimplied and
+# empirical variance-covariance structure
+
 part_configinv_fit <- 
     cfa(part_configinv_mod, data = data_star_selected_variables)
 
-semPaths(part_configinv_fit)
+semPaths(part_configinv_fit, what="std")
+parameterestimates(part_configinv_fit, standardized = T)
+summary(part_configinv_fit, rsquare = T)
 ```
 
 ## Schwache Invarianz
+Schwache 
 ```{r}
 part_weakinv_mod <- 
   "part4e =~ g4ptattn + s1*g4ptmtrl + s2*g4ptpers + s3*g4ptlate 
