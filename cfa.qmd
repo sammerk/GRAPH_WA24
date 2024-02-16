@@ -5,7 +5,7 @@ Im vorangegangenen Kapitel haben wir u.a. die Subskalen `Initiative` und `Effort
 ## Items der Participation Subskalen
 Die Items der beiden Skalen haben die folgenden Bezeichnungen:
 
-* Participation
+* Effort
     * *`r tolower("G4PTATTN")`*:  Grade 4 Participation: *Pays attention in class*
     * *`r tolower("G8PEATTN")`*:  Grade 8 Participation, *English: Pays attention in class*
     * *`r tolower("G8PMATTN")`*:  Grade 8 Participation, *Mathematics: Pays attention in class*
