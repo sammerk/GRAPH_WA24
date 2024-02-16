@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -211,7 +245,7 @@ div.csl-indent {
 <h2 data-number="2.1" class="anchored" data-anchor-id="items-der-participation-subskalen"><span class="header-section-number">2.1</span> Items der Participation Subskalen</h2>
 <p>Die Items der beiden Skalen haben die folgenden Bezeichnungen:</p>
 <ul>
-<li>Participation
+<li>Effort
 <ul>
 <li><p><em>g4ptattn</em>: Grade 4 Participation: <em>Pays attention in class</em></p></li>
 <li><p><em>g8peattn</em>: Grade 8 Participation, <em>English: Pays attention in class</em></p></li>
@@ -271,6 +305,47 @@ Formula-Like Expressions
 </section>
 <section id="ein-erstes-cfa-modell" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="ein-erstes-cfa-modell"><span class="header-section-number">2.3</span> Ein erstes CFA-Modell</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(semTools)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read selected variables</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>data_star_selected_variables <span class="ot">&lt;-</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">read_spss</span>(<span class="st">"data/data_star_selected_variables.sav"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># specifiy which item loads on which latent variable</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>part4_mod0 <span class="ot">&lt;-</span> <span class="st">"part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptmore + g4ptdisc + g4ptdiss"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>part4_mod1 <span class="ot">&lt;-</span> <span class="st">"eff =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">               init =~ g4ptmore + g4ptdisc + g4ptdiss"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>part4_fit0 <span class="ot">&lt;-</span> <span class="fu">cfa</span>(part4_mod0, <span class="at">data =</span> data_star_selected_variables)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>part4_fit1 <span class="ot">&lt;-</span> <span class="fu">cfa</span>(part4_mod1, <span class="at">data =</span> data_star_selected_variables)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">compareFit</span>(part4_fit0, part4_fit1, <span class="at">nested =</span> T))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>################### Nested Model Comparison #########################
+
+Chi-Squared Difference Test
+
+           Df   AIC   BIC  Chisq Chisq diff   RMSEA Df diff Pr(&gt;Chisq)    
+part4_fit1 13 42956 43042 274.60                                          
+part4_fit0 14 43089 43168 408.97     134.37 0.24555       1  &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+####################### Model Fit Indices ###########################
+              chisq df pvalue rmsea   cfi   tli  srmr        aic        bic
+part4_fit1 274.601† 13   .000 .095† .949† .917† .045† 42956.157† 43041.682†
+part4_fit0 408.969  14   .000 .113  .922  .883  .053  43088.526  43168.349 
+
+################## Differences in Fit Indices #######################
+                        df rmsea    cfi    tli  srmr     aic     bic
+part4_fit0 - part4_fit1  1 0.018 -0.026 -0.033 0.008 132.369 126.667</code></pre>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">

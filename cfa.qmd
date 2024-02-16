@@ -55,8 +55,6 @@ There can be seven types of formula-like expressions in the model syntax:
 
 ## Ein erstes CFA-Modell
 ```{r}
-#| echo: false
-#| results: hide
 #| warning: false
 #| message: false
 
@@ -69,11 +67,13 @@ library(semTools)
 data_star_selected_variables <- 
     read_spss("data/data_star_selected_variables.sav")
 
-part4_mod0 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
-               init =~ g4ptmore + g4ptdisc + g4ptdiss"
-part4_fit0 <- cfa(part4_mod0, data = data_star_selected_variables)
+# specifiy which item loads on which latent variable
+part4_mod0 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptmore + g4ptdisc + g4ptdiss"
 
-part4_mod1 <- "part =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate + g4ptmore + g4ptdisc + g4ptdiss"
+part4_mod1 <- "eff =~ g4ptattn + g4ptmtrl + g4ptpers + g4ptlate
+               init =~ g4ptmore + g4ptdisc + g4ptdiss"
+
+part4_fit0 <- cfa(part4_mod0, data = data_star_selected_variables)
 part4_fit1 <- cfa(part4_mod1, data = data_star_selected_variables)
 
 summary(compareFit(part4_fit0, part4_fit1, nested = T))
